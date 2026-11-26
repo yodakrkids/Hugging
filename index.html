@@ -365,9 +365,9 @@ function roundTable(x, z, r) {
   roundTable(2.2, 2.6, .34); chair(2.2, 3.25, Math.PI, M.seatGreen); chair(1.55, 2.5, Math.PI / 2, M.seatGreen);
 }
 
-// ---------- cup & plate shelf on the back counter ----------
+// ---------- cup & plate shelf on the bar ----------
 {
-  const x0 = -1.38, x1 = -.04, z0 = -5.36, z1 = -5.04, t = .05, SB = BT;   // stands on the back counter, against the wall
+  const x0 = -2.34, x1 = -1.0, z0 = -2.88, z1 = -2.56, t = .05, SB = CT;   // stands on the bar
   const lv = [SB, SB + .27, SB + .5, SB + .72];
   for (const y of lv) boxR(x0, x1, y, y + t, z0, z1, M.wood);
   boxR(x0, x0 + t, SB, lv[3] + t, z0, z1, M.wood); boxR(x1 - t, x1, SB, lv[3] + t, z0, z1, M.wood);
@@ -405,7 +405,7 @@ function roundTable(x, z, r) {
 {
   const labels = [['#e9e9e6', '#bfc0bd', '#c8102e'], ['#e7c6d8', '#f1e3ea', '#1c4fa0'], ['#b7d98a', '#e6ecae', '#0a7a3b'], ['#f6d36a', '#f0a093', '#2a5bb5'],
                   ['#8fa58c', '#b6c3ae', '#ce1126'], ['#f3c14e', '#a45bb0', '#fcd116'], ['#7fc4c0', '#bfe0cf', '#1f8f3a'], ['#e9736a', '#f09a86', '#1b8a3c']];
-  const g = group(-.05, CT, -2.78);
+  const g = group(-.71, BT, -5.22);   // back counter, against the wall
   const w = .98, pitch = .27, t = .035, d = .19;
   boxR(-w / 2, w / 2, 0, pitch * 2 + t, -d / 2 - .01, -d / 2, std({ color: 0x4d5648, roughness: .9 }), g);
   for (let r = 0; r <= 2; r++) boxR(-w / 2, w / 2, r * pitch, r * pitch + t, -d / 2, d / 2, M.wood, g);
@@ -644,7 +644,8 @@ const VIEWS = [
   ['카운터', [-.5, 1.5, .5], [-.4, 1.25, -2.9]],
   ['에스프레소 바', [1.95, 1.5, -3.15], [1.95, 1.2, -5.05]],
   ['드립 스테이션', [.15, 1.5, -1.25], [-.05, 1.33, -2.7]],
-  ['찻잔 선반', [-.7, 1.42, -3.35], [-.71, 1.3, -5.2]],
+  ['찻잔 선반', [-1.65, 1.48, -1.25], [-1.67, 1.44, -2.75]],
+  ['원두 랙', [-.7, 1.4, -3.6], [-.71, 1.22, -5.2]],
   ['쇼케이스', [4.5, 1.4, -.5], [4.55, 1.05, -2.6]],
   ['좌석', [-.9, 1.5, 1.6], [-4.3, .6, .3]],
   ['조감', [.9, 14.5, 4.2], [.9, 0, -.5]],
